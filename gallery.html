@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra photography</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/camera-icon/camera-icon-png-camera-icon-png-transparent-16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <section id="main">
+<div id="header">
+    <div class="itemh" style="color:rgb(56, 30, 30);letter-spacing:3px;font-weight:bold;font-size:30px;text-align:center;">MITRA PHOTOGRAPHY</div>
+    <div class="itemh" id="list">
+        <div class="listh"><a href="index.html">Home</a></div>
+        <div class="listh"><a href="index.html#about">About</a></div>
+        <div class="listh"><a href="index.html#gallery">Portfolio</a></div>
+        <div class="listh"><a href="index.html#blog">Blog</a></div>
+        <div class="listh"><a href="index.html#contact">Contact</a></div>
+    </div>
+   </div>
+   </section>
+<section id="gallery">
+   <div class="grid1">
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+    <div class="gi1"></div>
+</div>
+<div  id="modal">
+    <button id="close">&times;</button>
+    <div class="modchild">
+    
+    </div>
+</div>
+</section>
+<section id="gallery2">
+<div class="grid1">
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div class="gi2"></div>
+    <div  id="modal1">
+        <button id="close1">&times;</button>
+        <div class="modchild">
+        
+        </div>
+    </div>
+</div>
+</section>
+<section id="footer">
+    &#169; Mitra Prabakar
+</section>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function()
+{
+    $("#modal").hide();
+    $("#modal1").hide();
+    $("#Fade").fadeToggle(3000,
+    function()
+    {
+        $(this).remove()
+    }
+    )
+    $(".gi1").on("click",function()
+    
+    {
+        $("#modal").fadeIn(500);
+        console.log($(this).css("background-image"))
+        var images=$(this).css("background-image")
+        $(".modchild").css("background-image",images);
+        $("#gallery").css("background-image","linear-gradient(100deg,rgba(239, 197, 151, 0.517) 0%,rgba(99, 119, 108, 0.269) 100%)")
+    }
+    )
+    $("#close").on("click",function()
+    {
+        $("#modal").fadeOut(500);
+        $("#gallery").css("background-image","none")
+    })
+    $("#modal").on("click",function()
+    {
+        $("#modal").fadeOut(1000);
+        $("#gallery").css("background-image","none")
+    })
+
+
+
+    $(".gi2").on("click",function()
+    
+    {
+        $("#modal1").fadeIn(500);
+        console.log($(this).css("background-image"))
+        var images=$(this).css("background-image")
+        $(".modchild").css("background-image",images);
+        $("#gallery2").css("background-image","linear-gradient(100deg,rgba(239, 197, 151, 0.517) 0%,rgba(99, 119, 108, 0.269) 100%)")
+    }
+    )
+    $("#close1").on("click",function()
+    {
+        $("#modal1").fadeOut(500);
+        $("#gallery2").css("background-image","none")
+    })
+    $("#modal1").on("click",function()
+    {
+        $("#modal1").fadeOut(1000);
+        $("#gallery2").css("background-image","none")
+    })
+   
+}
+)
+</script>
+
+   </body>
+   </html>

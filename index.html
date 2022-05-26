@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/camera-icon/camera-icon-png-camera-icon-png-transparent-16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="see">
+    <section id="main">
+        
+<div id="header">
+    <div class="itemh" style="color:rgb(255, 255, 255);letter-spacing:3px;font-weight:bold;font-size:30px;text-align:center;">MITRA PHOTOGRAPHY</div>
+    <div class="itemh" id="list">
+        <div class="listh"><a href="#">Home</a></div>
+        <div class="listh"><a href="#about">About</a></div>
+        <div class="listh"><a href="#gallery">Portfolio</a></div>
+        <div class="listh"><a href="#blog">Blog</a></div>
+        <div class="listh"><a href="#contact">Contact</a></div>
+    </div>
+  
+<div id="hero">
+    <p>CAPTURE LIFE</p>
+</div>
+</div>
+<div id="Fade">
+    <p id="pp"><img src="https://see.fontimg.com/api/renderfont4/Wy4z9/eyJyIjoiZnMiLCJoIjo5OCwidyI6MTUwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/TWl0cmEgUGhvdG9ncmFwaHk/asterlove.png" alt="Calligraphy fonts"></p>
+            
+    </div>
+
+
+    </section>
+    <h1 style="text-transform:uppercase;" id="about">About</h1>
+    <div id="flex1">
+<div></div>
+<div>I am Mitra,an Engineer working in an Information Technology Sector. Photography is a hidden skill,which got discovered in my college years. Photography had made me to love many things and allowed me to add beauty to the world:)</div>
+
+    </div>
+  
+    <section id="gallery">
+        <h1>Gallery</h1>
+
+      
+        <div class="grid1">
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+            <div class="gi1"></div>
+        </div>
+        <a href="gallery.html">Load More..</a>
+        <div  id="modal">
+            <button id="close">&times;</button>
+            <div id="modchild">
+            
+            </div>
+        </div>
+        
+    </section>
+    <br>
+    
+    <section id="last">
+        
+        <h1 style="color:rgb(0, 0, 0)">BLOG</h1>
+        <section id="blog">
+            <div class="blog1">
+                <img src="https://ik.imagekit.io/mitraphoto/g2_hCebc777Kc.jpg">
+                <p>Shore after the tide</p>
+                <p>By Admin|April 10 2022</p>
+                <p>Read about the article on shore about tide.</p>
+                <a href="blog.html">Read more...</a>
+            </div>
+            <div class="blog1">
+             <img src="https://ik.imagekit.io/mitraphoto/g3_l52lJ3N9af.jpg">
+             <p>Tripping to hills</p>
+             <p>By Admin|April 18 2022</p>
+             <p>Read about the article on  an amzing trip to hill stations.</p>
+             <a href="blog.html">Read more...</a>
+         </div>
+         <div class="blog1">
+             <img src="https://ik.imagekit.io/mitraphoto/g1_TG5pqLfy0.jpg">
+             <p>Awesome Mangroove forests</p>
+             <p>By Admin|April 30 2022</p>
+             <p>Read about the article on greeny mangroove forests.</p>
+             <a href="blog.html">Read more...</a>
+         </div>
+        </section>
+        
+        <h1 style="color:rgb(0, 0, 0)">CONTACT</h1>
+    <section id="contact">
+
+        <div class="con1"  >
+            <img src="location-pin.png">
+            <p>Coimbatore,Tamilnadu</p>
+        </div>
+        <div class="con1"  >
+         <img src="phone.png">
+         <p>+91 9344807965</p>
+     </div>
+     <div class="con1" style="padding:60px 0px;
+     text-align:center;">
+         <img src="mail.png">
+         <p>mitra.prabakar@gmail.com</p>
+     </div>
+    </section>
+    </section>
+
+<section id="footer">
+    &#169; Mitra CP
+</section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script>
+    $(document).ready(function()
+{
+    $("#modal").hide();
+    $("#Fade").fadeToggle(3000,
+    function()
+    {
+        $(this).remove()
+    }
+    )
+    $(".gi1").on("click",function()
+    
+    {
+        $("#modal").fadeIn(500);
+        console.log($(this).css("background-image"))
+        var images=$(this).css("background-image")
+        $("#modchild").css("background-image",images);
+        $("#gallery").css("background-image","linear-gradient(100deg,rgba(239, 197, 151, 0.517) 0%,rgba(99, 119, 108, 0.269) 100%)")
+    }
+    )
+    $("#close").on("click",function()
+    {
+        $("#modal").fadeOut(500);
+        $("#gallery").css("background-image","none")
+    })
+    $("#modal").on("click",function()
+    {
+        $("#modal").fadeOut(1000);
+        $("#gallery").css("background-image","none")
+    })
+}
+)
+</script>
+</body>
+</html>
